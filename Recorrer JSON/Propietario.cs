@@ -10,8 +10,10 @@ namespace Recorrer_JSON {
         public String Nombre;
         public String Telefono;
         public String Email;
+        public Propiedad[] Proiedades;
 
-        public Propietario(String dni, String nombre, String telefono, String email) {
+        public Propietario(String dni, String nombre, String telefono, String email, Propiedad[] propiedades) {
+            this.Proiedades= propiedades;
             this.DNI = dni;
             this.Nombre = nombre;
             this.Telefono = telefono;

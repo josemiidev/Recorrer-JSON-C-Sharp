@@ -24,7 +24,16 @@
         /// </summary>
         private void InitializeComponent() {
             this.pnlPropietario = new System.Windows.Forms.Panel();
+            this.btnEliminarPropietario = new System.Windows.Forms.Button();
+            this.btnGuardarPropietario = new System.Windows.Forms.Button();
+            this.btnModificarPropietario = new System.Windows.Forms.Button();
+            this.btnPosteriorPropietario = new System.Windows.Forms.Button();
+            this.btnAnteriorPropietario = new System.Windows.Forms.Button();
             this.dgvPropietarios = new System.Windows.Forms.DataGridView();
+            this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -35,6 +44,17 @@
             this.txtDNI = new System.Windows.Forms.MaskedTextBox();
             this.lblTituloPropietario = new System.Windows.Forms.Label();
             this.pnlPropiedad = new System.Windows.Forms.Panel();
+            this.dgvPropiedades = new System.Windows.Forms.DataGridView();
+            this.referencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminarPropiedad = new System.Windows.Forms.Button();
+            this.btnGuardarPropiedad = new System.Windows.Forms.Button();
+            this.btnModificarPropiedad = new System.Windows.Forms.Button();
+            this.btnPosteriorPropiedad = new System.Windows.Forms.Button();
+            this.btnAnteriorPropiedad = new System.Windows.Forms.Button();
             this.txtCuota = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtLocalidad = new System.Windows.Forms.TextBox();
@@ -46,26 +66,8 @@
             this.lblReferencia = new System.Windows.Forms.Label();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.lblTituloPropiedad = new System.Windows.Forms.Label();
-            this.btnAnteriorPropietario = new System.Windows.Forms.Button();
-            this.btnPosteriorPropietario = new System.Windows.Forms.Button();
-            this.btnAnteriorPropiedad = new System.Windows.Forms.Button();
-            this.btnPosteriorPropiedad = new System.Windows.Forms.Button();
-            this.btnModificarPropietario = new System.Windows.Forms.Button();
-            this.btnGuardarPropietario = new System.Windows.Forms.Button();
-            this.btnEliminarPropietario = new System.Windows.Forms.Button();
-            this.btnEliminarPropiedad = new System.Windows.Forms.Button();
-            this.btnGuardarPropiedad = new System.Windows.Forms.Button();
-            this.btnModificarPropiedad = new System.Windows.Forms.Button();
-            this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPropiedades = new System.Windows.Forms.DataGridView();
-            this.referencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblErrorPropietario = new System.Windows.Forms.Label();
+            this.lblErrorPropiedad = new System.Windows.Forms.Label();
             this.pnlPropietario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).BeginInit();
             this.pnlPropiedad.SuspendLayout();
@@ -77,6 +79,7 @@
             this.pnlPropietario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlPropietario.BackColor = System.Drawing.Color.White;
+            this.pnlPropietario.Controls.Add(this.lblErrorPropietario);
             this.pnlPropietario.Controls.Add(this.btnEliminarPropietario);
             this.pnlPropietario.Controls.Add(this.btnGuardarPropietario);
             this.pnlPropietario.Controls.Add(this.btnModificarPropietario);
@@ -96,6 +99,58 @@
             this.pnlPropietario.Name = "pnlPropietario";
             this.pnlPropietario.Size = new System.Drawing.Size(579, 592);
             this.pnlPropietario.TabIndex = 0;
+            // 
+            // btnEliminarPropietario
+            // 
+            this.btnEliminarPropietario.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarPropietario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminarPropietario.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarPropietario.Location = new System.Drawing.Point(469, 21);
+            this.btnEliminarPropietario.Name = "btnEliminarPropietario";
+            this.btnEliminarPropietario.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarPropietario.TabIndex = 15;
+            this.btnEliminarPropietario.Text = "Eliminar";
+            this.btnEliminarPropietario.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardarPropietario
+            // 
+            this.btnGuardarPropietario.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnGuardarPropietario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarPropietario.Location = new System.Drawing.Point(371, 21);
+            this.btnGuardarPropietario.Name = "btnGuardarPropietario";
+            this.btnGuardarPropietario.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarPropietario.TabIndex = 14;
+            this.btnGuardarPropietario.Text = "Guardar";
+            this.btnGuardarPropietario.UseVisualStyleBackColor = false;
+            // 
+            // btnModificarPropietario
+            // 
+            this.btnModificarPropietario.BackColor = System.Drawing.Color.Gold;
+            this.btnModificarPropietario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificarPropietario.Location = new System.Drawing.Point(272, 21);
+            this.btnModificarPropietario.Name = "btnModificarPropietario";
+            this.btnModificarPropietario.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarPropietario.TabIndex = 13;
+            this.btnModificarPropietario.Text = "Modificar";
+            this.btnModificarPropietario.UseVisualStyleBackColor = false;
+            // 
+            // btnPosteriorPropietario
+            // 
+            this.btnPosteriorPropietario.Location = new System.Drawing.Point(550, 21);
+            this.btnPosteriorPropietario.Name = "btnPosteriorPropietario";
+            this.btnPosteriorPropietario.Size = new System.Drawing.Size(26, 23);
+            this.btnPosteriorPropietario.TabIndex = 12;
+            this.btnPosteriorPropietario.Text = ">";
+            this.btnPosteriorPropietario.UseVisualStyleBackColor = true;
+            // 
+            // btnAnteriorPropietario
+            // 
+            this.btnAnteriorPropietario.Location = new System.Drawing.Point(240, 21);
+            this.btnAnteriorPropietario.Name = "btnAnteriorPropietario";
+            this.btnAnteriorPropietario.Size = new System.Drawing.Size(26, 23);
+            this.btnAnteriorPropietario.TabIndex = 11;
+            this.btnAnteriorPropietario.Text = "<";
+            this.btnAnteriorPropietario.UseVisualStyleBackColor = true;
             // 
             // dgvPropietarios
             // 
@@ -121,6 +176,30 @@
             this.dgvPropietarios.ShowRowErrors = false;
             this.dgvPropietarios.Size = new System.Drawing.Size(573, 396);
             this.dgvPropietarios.TabIndex = 10;
+            // 
+            // dni
+            // 
+            this.dni.HeaderText = "DNI";
+            this.dni.Name = "dni";
+            this.dni.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
             // lblEmail
             // 
@@ -209,6 +288,7 @@
             this.pnlPropiedad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPropiedad.BackColor = System.Drawing.Color.White;
+            this.pnlPropiedad.Controls.Add(this.lblErrorPropiedad);
             this.pnlPropiedad.Controls.Add(this.dgvPropiedades);
             this.pnlPropiedad.Controls.Add(this.btnEliminarPropiedad);
             this.pnlPropiedad.Controls.Add(this.btnGuardarPropiedad);
@@ -230,6 +310,114 @@
             this.pnlPropiedad.Name = "pnlPropiedad";
             this.pnlPropiedad.Size = new System.Drawing.Size(579, 592);
             this.pnlPropiedad.TabIndex = 1;
+            // 
+            // dgvPropiedades
+            // 
+            this.dgvPropiedades.AllowUserToAddRows = false;
+            this.dgvPropiedades.AllowUserToDeleteRows = false;
+            this.dgvPropiedades.AllowUserToResizeColumns = false;
+            this.dgvPropiedades.AllowUserToResizeRows = false;
+            this.dgvPropiedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPropiedades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.referencia,
+            this.direccion,
+            this.localidad,
+            this.descripcion,
+            this.cuota});
+            this.dgvPropiedades.Location = new System.Drawing.Point(3, 193);
+            this.dgvPropiedades.MultiSelect = false;
+            this.dgvPropiedades.Name = "dgvPropiedades";
+            this.dgvPropiedades.ReadOnly = true;
+            this.dgvPropiedades.RowHeadersVisible = false;
+            this.dgvPropiedades.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPropiedades.ShowCellErrors = false;
+            this.dgvPropiedades.ShowCellToolTips = false;
+            this.dgvPropiedades.ShowEditingIcon = false;
+            this.dgvPropiedades.ShowRowErrors = false;
+            this.dgvPropiedades.Size = new System.Drawing.Size(573, 396);
+            this.dgvPropiedades.TabIndex = 19;
+            // 
+            // referencia
+            // 
+            this.referencia.HeaderText = "Referencia";
+            this.referencia.Name = "referencia";
+            this.referencia.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // localidad
+            // 
+            this.localidad.HeaderText = "Localidad";
+            this.localidad.Name = "localidad";
+            this.localidad.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // cuota
+            // 
+            this.cuota.HeaderText = "Cuota";
+            this.cuota.Name = "cuota";
+            this.cuota.ReadOnly = true;
+            // 
+            // btnEliminarPropiedad
+            // 
+            this.btnEliminarPropiedad.BackColor = System.Drawing.Color.Red;
+            this.btnEliminarPropiedad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminarPropiedad.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarPropiedad.Location = new System.Drawing.Point(469, 21);
+            this.btnEliminarPropiedad.Name = "btnEliminarPropiedad";
+            this.btnEliminarPropiedad.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarPropiedad.TabIndex = 18;
+            this.btnEliminarPropiedad.Text = "Eliminar";
+            this.btnEliminarPropiedad.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardarPropiedad
+            // 
+            this.btnGuardarPropiedad.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnGuardarPropiedad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarPropiedad.Location = new System.Drawing.Point(366, 21);
+            this.btnGuardarPropiedad.Name = "btnGuardarPropiedad";
+            this.btnGuardarPropiedad.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarPropiedad.TabIndex = 17;
+            this.btnGuardarPropiedad.Text = "Guardar";
+            this.btnGuardarPropiedad.UseVisualStyleBackColor = false;
+            // 
+            // btnModificarPropiedad
+            // 
+            this.btnModificarPropiedad.BackColor = System.Drawing.Color.Gold;
+            this.btnModificarPropiedad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificarPropiedad.Location = new System.Drawing.Point(263, 21);
+            this.btnModificarPropiedad.Name = "btnModificarPropiedad";
+            this.btnModificarPropiedad.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarPropiedad.TabIndex = 16;
+            this.btnModificarPropiedad.Text = "Modificar";
+            this.btnModificarPropiedad.UseVisualStyleBackColor = false;
+            // 
+            // btnPosteriorPropiedad
+            // 
+            this.btnPosteriorPropiedad.Location = new System.Drawing.Point(550, 21);
+            this.btnPosteriorPropiedad.Name = "btnPosteriorPropiedad";
+            this.btnPosteriorPropiedad.Size = new System.Drawing.Size(26, 23);
+            this.btnPosteriorPropiedad.TabIndex = 13;
+            this.btnPosteriorPropiedad.Text = ">";
+            this.btnPosteriorPropiedad.UseVisualStyleBackColor = true;
+            // 
+            // btnAnteriorPropiedad
+            // 
+            this.btnAnteriorPropiedad.Location = new System.Drawing.Point(231, 21);
+            this.btnAnteriorPropiedad.Name = "btnAnteriorPropiedad";
+            this.btnAnteriorPropiedad.Size = new System.Drawing.Size(26, 23);
+            this.btnAnteriorPropiedad.TabIndex = 12;
+            this.btnAnteriorPropiedad.Text = "<";
+            this.btnAnteriorPropiedad.UseVisualStyleBackColor = true;
             // 
             // txtCuota
             // 
@@ -331,175 +519,23 @@
             this.lblTituloPropiedad.TabIndex = 0;
             this.lblTituloPropiedad.Text = "PROPIEDADES";
             // 
-            // btnAnteriorPropietario
+            // lblErrorPropietario
             // 
-            this.btnAnteriorPropietario.Location = new System.Drawing.Point(240, 21);
-            this.btnAnteriorPropietario.Name = "btnAnteriorPropietario";
-            this.btnAnteriorPropietario.Size = new System.Drawing.Size(26, 23);
-            this.btnAnteriorPropietario.TabIndex = 11;
-            this.btnAnteriorPropietario.Text = "<";
-            this.btnAnteriorPropietario.UseVisualStyleBackColor = true;
+            this.lblErrorPropietario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPropietario.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorPropietario.Location = new System.Drawing.Point(240, 52);
+            this.lblErrorPropietario.Name = "lblErrorPropietario";
+            this.lblErrorPropietario.Size = new System.Drawing.Size(336, 131);
+            this.lblErrorPropietario.TabIndex = 16;
             // 
-            // btnPosteriorPropietario
+            // lblErrorPropiedad
             // 
-            this.btnPosteriorPropietario.Location = new System.Drawing.Point(550, 21);
-            this.btnPosteriorPropietario.Name = "btnPosteriorPropietario";
-            this.btnPosteriorPropietario.Size = new System.Drawing.Size(26, 23);
-            this.btnPosteriorPropietario.TabIndex = 12;
-            this.btnPosteriorPropietario.Text = ">";
-            this.btnPosteriorPropietario.UseVisualStyleBackColor = true;
-            // 
-            // btnAnteriorPropiedad
-            // 
-            this.btnAnteriorPropiedad.Location = new System.Drawing.Point(231, 21);
-            this.btnAnteriorPropiedad.Name = "btnAnteriorPropiedad";
-            this.btnAnteriorPropiedad.Size = new System.Drawing.Size(26, 23);
-            this.btnAnteriorPropiedad.TabIndex = 12;
-            this.btnAnteriorPropiedad.Text = "<";
-            this.btnAnteriorPropiedad.UseVisualStyleBackColor = true;
-            // 
-            // btnPosteriorPropiedad
-            // 
-            this.btnPosteriorPropiedad.Location = new System.Drawing.Point(550, 21);
-            this.btnPosteriorPropiedad.Name = "btnPosteriorPropiedad";
-            this.btnPosteriorPropiedad.Size = new System.Drawing.Size(26, 23);
-            this.btnPosteriorPropiedad.TabIndex = 13;
-            this.btnPosteriorPropiedad.Text = ">";
-            this.btnPosteriorPropiedad.UseVisualStyleBackColor = true;
-            // 
-            // btnModificarPropietario
-            // 
-            this.btnModificarPropietario.Location = new System.Drawing.Point(272, 21);
-            this.btnModificarPropietario.Name = "btnModificarPropietario";
-            this.btnModificarPropietario.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarPropietario.TabIndex = 13;
-            this.btnModificarPropietario.Text = "Modificar";
-            this.btnModificarPropietario.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardarPropietario
-            // 
-            this.btnGuardarPropietario.Location = new System.Drawing.Point(371, 21);
-            this.btnGuardarPropietario.Name = "btnGuardarPropietario";
-            this.btnGuardarPropietario.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarPropietario.TabIndex = 14;
-            this.btnGuardarPropietario.Text = "Guardar";
-            this.btnGuardarPropietario.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarPropietario
-            // 
-            this.btnEliminarPropietario.Location = new System.Drawing.Point(469, 21);
-            this.btnEliminarPropietario.Name = "btnEliminarPropietario";
-            this.btnEliminarPropietario.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarPropietario.TabIndex = 15;
-            this.btnEliminarPropietario.Text = "Eliminar";
-            this.btnEliminarPropietario.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarPropiedad
-            // 
-            this.btnEliminarPropiedad.Location = new System.Drawing.Point(469, 21);
-            this.btnEliminarPropiedad.Name = "btnEliminarPropiedad";
-            this.btnEliminarPropiedad.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarPropiedad.TabIndex = 18;
-            this.btnEliminarPropiedad.Text = "Eliminar";
-            this.btnEliminarPropiedad.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardarPropiedad
-            // 
-            this.btnGuardarPropiedad.Location = new System.Drawing.Point(366, 21);
-            this.btnGuardarPropiedad.Name = "btnGuardarPropiedad";
-            this.btnGuardarPropiedad.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarPropiedad.TabIndex = 17;
-            this.btnGuardarPropiedad.Text = "Guardar";
-            this.btnGuardarPropiedad.UseVisualStyleBackColor = true;
-            // 
-            // btnModificarPropiedad
-            // 
-            this.btnModificarPropiedad.Location = new System.Drawing.Point(263, 21);
-            this.btnModificarPropiedad.Name = "btnModificarPropiedad";
-            this.btnModificarPropiedad.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarPropiedad.TabIndex = 16;
-            this.btnModificarPropiedad.Text = "Modificar";
-            this.btnModificarPropiedad.UseVisualStyleBackColor = true;
-            // 
-            // dni
-            // 
-            this.dni.HeaderText = "DNI";
-            this.dni.Name = "dni";
-            this.dni.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.HeaderText = "Teléfono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // dgvPropiedades
-            // 
-            this.dgvPropiedades.AllowUserToAddRows = false;
-            this.dgvPropiedades.AllowUserToDeleteRows = false;
-            this.dgvPropiedades.AllowUserToResizeColumns = false;
-            this.dgvPropiedades.AllowUserToResizeRows = false;
-            this.dgvPropiedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPropiedades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.referencia,
-            this.direccion,
-            this.localidad,
-            this.descripcion,
-            this.cuota});
-            this.dgvPropiedades.Location = new System.Drawing.Point(3, 193);
-            this.dgvPropiedades.MultiSelect = false;
-            this.dgvPropiedades.Name = "dgvPropiedades";
-            this.dgvPropiedades.ReadOnly = true;
-            this.dgvPropiedades.RowHeadersVisible = false;
-            this.dgvPropiedades.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvPropiedades.ShowCellErrors = false;
-            this.dgvPropiedades.ShowCellToolTips = false;
-            this.dgvPropiedades.ShowEditingIcon = false;
-            this.dgvPropiedades.ShowRowErrors = false;
-            this.dgvPropiedades.Size = new System.Drawing.Size(573, 396);
-            this.dgvPropiedades.TabIndex = 19;
-            // 
-            // referencia
-            // 
-            this.referencia.HeaderText = "Referencia";
-            this.referencia.Name = "referencia";
-            this.referencia.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            // 
-            // localidad
-            // 
-            this.localidad.HeaderText = "Localidad";
-            this.localidad.Name = "localidad";
-            this.localidad.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // cuota
-            // 
-            this.cuota.HeaderText = "Cuota";
-            this.cuota.Name = "cuota";
-            this.cuota.ReadOnly = true;
+            this.lblErrorPropiedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPropiedad.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorPropiedad.Location = new System.Drawing.Point(272, 47);
+            this.lblErrorPropiedad.Name = "lblErrorPropiedad";
+            this.lblErrorPropiedad.Size = new System.Drawing.Size(272, 136);
+            this.lblErrorPropiedad.TabIndex = 20;
             // 
             // Inicio
             // 
@@ -567,6 +603,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn localidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn cuota;
+        private System.Windows.Forms.Label lblErrorPropietario;
+        private System.Windows.Forms.Label lblErrorPropiedad;
     }
 }
 
