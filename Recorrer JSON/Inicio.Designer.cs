@@ -109,7 +109,7 @@
             this.txtEmail.Location = new System.Drawing.Point(90, 133);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(144, 22);
-            this.txtEmail.TabIndex = 18;
+            this.txtEmail.TabIndex = 4;
             // 
             // btnLimpiar
             // 
@@ -299,7 +299,7 @@
             // 
             this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDNI.Location = new System.Drawing.Point(90, 49);
-            this.txtDNI.Mask = "00000000A";
+            this.txtDNI.Mask = "00000000L";
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(144, 22);
             this.txtDNI.TabIndex = 1;

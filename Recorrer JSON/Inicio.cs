@@ -96,6 +96,7 @@ namespace Recorrer_JSON {
                 bd.Insertar(p);
                 //RECARGAMOS LOS DATAGRIDVIEW
                 CargarDataGridView(bd.valores);
+                dgvPropietarios.ClearSelection();
             }
         }
 
@@ -401,12 +402,12 @@ namespace Recorrer_JSON {
             //COMPROBAMOS SI HAY ALGUNA FILA SELECCIONADA
             //  SI NO HAY SELECCIONAMOS LA 0
             //  SI HAY SELECCIONAMOS LA SIGUIENTE SI NO ES LA PRIMERA
-            if (dgvPropietarios.SelectedRows.Count > 0) {
-                if (dgvPropietarios.SelectedRows[0].Index > 0) {
-                    dgvPropietarios.Rows[dgvPropietarios.SelectedRows[0].Index - 1].Selected = true;
+            if (dgvPropiedades.SelectedRows.Count > 0) {
+                if (dgvPropiedades.SelectedRows[0].Index > 0) {
+                    dgvPropiedades.Rows[dgvPropiedades.SelectedRows[0].Index - 1].Selected = true;
                 }
             } else {
-                dgvPropietarios.Rows[0].Selected = true;
+                dgvPropiedades.Rows[0].Selected = true;
             }
         }
 
@@ -415,12 +416,12 @@ namespace Recorrer_JSON {
             //COMPROBAMOS SI HAY ALGUNA FILA SELECCIONADA
             //  SI NO HAY SELECCIONAMOS LA 0
             //  SI HAY SELECCIONAMOS LA SIGUIENTE SI NO ES LA ULTIMA
-            if (dgvPropietarios.SelectedRows.Count > 0) {
-                if (dgvPropietarios.SelectedRows[0].Index < dgvPropietarios.Rows.Count - 1) {
-                    dgvPropietarios.Rows[dgvPropietarios.SelectedRows[0].Index + 1].Selected = true;
+            if (dgvPropiedades.SelectedRows.Count > 0) {
+                if (dgvPropiedades.SelectedRows[0].Index < dgvPropiedades.Rows.Count - 1) {
+                    dgvPropiedades.Rows[dgvPropiedades.SelectedRows[0].Index + 1].Selected = true;
                 }
             } else {
-                dgvPropietarios.Rows[0].Selected = true;
+                dgvPropiedades.Rows[0].Selected = true;
             }
         }
     }
