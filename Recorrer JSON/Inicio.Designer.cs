@@ -175,6 +175,7 @@
             this.btnPosteriorPropietario.TabIndex = 12;
             this.btnPosteriorPropietario.Text = ">";
             this.btnPosteriorPropietario.UseVisualStyleBackColor = true;
+            this.btnPosteriorPropietario.Click += new System.EventHandler(this.btnPosteriorPropietario_Click);
             // 
             // btnAnteriorPropietario
             // 
@@ -184,6 +185,7 @@
             this.btnAnteriorPropietario.TabIndex = 11;
             this.btnAnteriorPropietario.Text = "<";
             this.btnAnteriorPropietario.UseVisualStyleBackColor = true;
+            this.btnAnteriorPropietario.Click += new System.EventHandler(this.btnAnteriorPropietario_Click);
             // 
             // dgvPropietarios
             // 
@@ -423,6 +425,7 @@
             this.btnPosteriorPropiedad.TabIndex = 13;
             this.btnPosteriorPropiedad.Text = ">";
             this.btnPosteriorPropiedad.UseVisualStyleBackColor = true;
+            this.btnPosteriorPropiedad.Click += new System.EventHandler(this.btnPosteriorPropiedad_Click);
             // 
             // btnAnteriorPropiedad
             // 
@@ -432,6 +435,7 @@
             this.btnAnteriorPropiedad.TabIndex = 12;
             this.btnAnteriorPropiedad.Text = "<";
             this.btnAnteriorPropiedad.UseVisualStyleBackColor = true;
+            this.btnAnteriorPropiedad.Click += new System.EventHandler(this.btnAnteriorPropiedad_Click);
             // 
             // txtCuota
             // 
