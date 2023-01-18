@@ -111,6 +111,7 @@
             this.btnEliminarPropietario.TabIndex = 15;
             this.btnEliminarPropietario.Text = "Eliminar";
             this.btnEliminarPropietario.UseVisualStyleBackColor = false;
+            this.btnEliminarPropietario.Click += new System.EventHandler(this.btnEliminarPropietario_Click);
             // 
             // btnGuardarPropietario
             // 
@@ -122,6 +123,7 @@
             this.btnGuardarPropietario.TabIndex = 14;
             this.btnGuardarPropietario.Text = "Guardar";
             this.btnGuardarPropietario.UseVisualStyleBackColor = false;
+            this.btnGuardarPropietario.Click += new System.EventHandler(this.btnGuardarPropietario_Click);
             // 
             // btnModificarPropietario
             // 
@@ -133,6 +135,7 @@
             this.btnModificarPropietario.TabIndex = 13;
             this.btnModificarPropietario.Text = "Modificar";
             this.btnModificarPropietario.UseVisualStyleBackColor = false;
+            this.btnModificarPropietario.Click += new System.EventHandler(this.btnModificarPropietario_Click);
             // 
             // btnPosteriorPropietario
             // 
@@ -170,12 +173,14 @@
             this.dgvPropietarios.ReadOnly = true;
             this.dgvPropietarios.RowHeadersVisible = false;
             this.dgvPropietarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPropietarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPropietarios.ShowCellErrors = false;
             this.dgvPropietarios.ShowCellToolTips = false;
             this.dgvPropietarios.ShowEditingIcon = false;
             this.dgvPropietarios.ShowRowErrors = false;
             this.dgvPropietarios.Size = new System.Drawing.Size(573, 396);
             this.dgvPropietarios.TabIndex = 10;
+            this.dgvPropietarios.SelectionChanged += new System.EventHandler(this.dgvPropietarios_SelectionChanged);
             // 
             // dni
             // 
@@ -330,12 +335,14 @@
             this.dgvPropiedades.ReadOnly = true;
             this.dgvPropiedades.RowHeadersVisible = false;
             this.dgvPropiedades.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPropiedades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPropiedades.ShowCellErrors = false;
             this.dgvPropiedades.ShowCellToolTips = false;
             this.dgvPropiedades.ShowEditingIcon = false;
             this.dgvPropiedades.ShowRowErrors = false;
             this.dgvPropiedades.Size = new System.Drawing.Size(573, 396);
             this.dgvPropiedades.TabIndex = 19;
+            this.dgvPropiedades.SelectionChanged += new System.EventHandler(this.dgvPropiedades_SelectionChanged);
             // 
             // referencia
             // 
@@ -378,6 +385,7 @@
             this.btnEliminarPropiedad.TabIndex = 18;
             this.btnEliminarPropiedad.Text = "Eliminar";
             this.btnEliminarPropiedad.UseVisualStyleBackColor = false;
+            this.btnEliminarPropiedad.Click += new System.EventHandler(this.btnEliminarPropiedad_Click);
             // 
             // btnGuardarPropiedad
             // 
@@ -389,6 +397,7 @@
             this.btnGuardarPropiedad.TabIndex = 17;
             this.btnGuardarPropiedad.Text = "Guardar";
             this.btnGuardarPropiedad.UseVisualStyleBackColor = false;
+            this.btnGuardarPropiedad.Click += new System.EventHandler(this.btnGuardarPropiedad_Click);
             // 
             // btnModificarPropiedad
             // 
@@ -400,6 +409,7 @@
             this.btnModificarPropiedad.TabIndex = 16;
             this.btnModificarPropiedad.Text = "Modificar";
             this.btnModificarPropiedad.UseVisualStyleBackColor = false;
+            this.btnModificarPropiedad.Click += new System.EventHandler(this.btnModificarPropiedad_Click);
             // 
             // btnPosteriorPropiedad
             // 
@@ -548,6 +558,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Inicio";
             this.Text = "Recorrer JSON";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.pnlPropietario.ResumeLayout(false);
             this.pnlPropietario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).EndInit();
