@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recorrer JSON", "Recorrer JSON\Recorrer JSON.csproj", "{F5DA3FB7-2F4F-464F-9DBA-2A8B3A14C730}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5DA3FB7-2F4F-464F-9DBA-2A8B3A14C730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5DA3FB7-2F4F-464F-9DBA-2A8B3A14C730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5DA3FB7-2F4F-464F-9DBA-2A8B3A14C730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5DA3FB7-2F4F-464F-9DBA-2A8B3A14C730}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44165225-6AA4-4B75-A99C-E2D842A007E1}
+	EndGlobalSection
+EndGlobal
