@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.pnlPropietario = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPropietarios = new System.Windows.Forms.DataGridView();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -40,7 +40,6 @@
             this.txtLocalidad = new System.Windows.Forms.TextBox();
             this.lblCuotaAlquiler = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblLocalidad = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -57,10 +56,20 @@
             this.btnEliminarPropiedad = new System.Windows.Forms.Button();
             this.btnGuardarPropiedad = new System.Windows.Forms.Button();
             this.btnModificarPropiedad = new System.Windows.Forms.Button();
+            this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPropiedades = new System.Windows.Forms.DataGridView();
+            this.referencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlPropietario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).BeginInit();
             this.pnlPropiedad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedades)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPropietario
@@ -73,7 +82,7 @@
             this.pnlPropietario.Controls.Add(this.btnModificarPropietario);
             this.pnlPropietario.Controls.Add(this.btnPosteriorPropietario);
             this.pnlPropietario.Controls.Add(this.btnAnteriorPropietario);
-            this.pnlPropietario.Controls.Add(this.dataGridView1);
+            this.pnlPropietario.Controls.Add(this.dgvPropietarios);
             this.pnlPropietario.Controls.Add(this.lblEmail);
             this.pnlPropietario.Controls.Add(this.lblTelefono);
             this.pnlPropietario.Controls.Add(this.lblNombre);
@@ -88,13 +97,30 @@
             this.pnlPropietario.Size = new System.Drawing.Size(579, 592);
             this.pnlPropietario.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvPropietarios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 193);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(573, 396);
-            this.dataGridView1.TabIndex = 10;
+            this.dgvPropietarios.AllowUserToAddRows = false;
+            this.dgvPropietarios.AllowUserToDeleteRows = false;
+            this.dgvPropietarios.AllowUserToResizeColumns = false;
+            this.dgvPropietarios.AllowUserToResizeRows = false;
+            this.dgvPropietarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPropietarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dni,
+            this.nombre,
+            this.telefono,
+            this.email});
+            this.dgvPropietarios.Location = new System.Drawing.Point(3, 193);
+            this.dgvPropietarios.MultiSelect = false;
+            this.dgvPropietarios.Name = "dgvPropietarios";
+            this.dgvPropietarios.ReadOnly = true;
+            this.dgvPropietarios.RowHeadersVisible = false;
+            this.dgvPropietarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPropietarios.ShowCellErrors = false;
+            this.dgvPropietarios.ShowCellToolTips = false;
+            this.dgvPropietarios.ShowEditingIcon = false;
+            this.dgvPropietarios.ShowRowErrors = false;
+            this.dgvPropietarios.Size = new System.Drawing.Size(573, 396);
+            this.dgvPropietarios.TabIndex = 10;
             // 
             // lblEmail
             // 
@@ -183,6 +209,7 @@
             this.pnlPropiedad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPropiedad.BackColor = System.Drawing.Color.White;
+            this.pnlPropiedad.Controls.Add(this.dgvPropiedades);
             this.pnlPropiedad.Controls.Add(this.btnEliminarPropiedad);
             this.pnlPropiedad.Controls.Add(this.btnGuardarPropiedad);
             this.pnlPropiedad.Controls.Add(this.btnModificarPropiedad);
@@ -193,7 +220,6 @@
             this.pnlPropiedad.Controls.Add(this.txtLocalidad);
             this.pnlPropiedad.Controls.Add(this.lblCuotaAlquiler);
             this.pnlPropiedad.Controls.Add(this.txtDireccion);
-            this.pnlPropiedad.Controls.Add(this.dataGridView2);
             this.pnlPropiedad.Controls.Add(this.lblDescripcion);
             this.pnlPropiedad.Controls.Add(this.lblLocalidad);
             this.pnlPropiedad.Controls.Add(this.lblDireccion);
@@ -246,14 +272,6 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(144, 22);
             this.txtDireccion.TabIndex = 6;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 193);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(573, 396);
-            this.dataGridView2.TabIndex = 11;
             // 
             // lblDescripcion
             // 
@@ -403,6 +421,86 @@
             this.btnModificarPropiedad.Text = "Modificar";
             this.btnModificarPropiedad.UseVisualStyleBackColor = true;
             // 
+            // dni
+            // 
+            this.dni.HeaderText = "DNI";
+            this.dni.Name = "dni";
+            this.dni.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // dgvPropiedades
+            // 
+            this.dgvPropiedades.AllowUserToAddRows = false;
+            this.dgvPropiedades.AllowUserToDeleteRows = false;
+            this.dgvPropiedades.AllowUserToResizeColumns = false;
+            this.dgvPropiedades.AllowUserToResizeRows = false;
+            this.dgvPropiedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPropiedades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.referencia,
+            this.direccion,
+            this.localidad,
+            this.descripcion,
+            this.cuota});
+            this.dgvPropiedades.Location = new System.Drawing.Point(3, 193);
+            this.dgvPropiedades.MultiSelect = false;
+            this.dgvPropiedades.Name = "dgvPropiedades";
+            this.dgvPropiedades.ReadOnly = true;
+            this.dgvPropiedades.RowHeadersVisible = false;
+            this.dgvPropiedades.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvPropiedades.ShowCellErrors = false;
+            this.dgvPropiedades.ShowCellToolTips = false;
+            this.dgvPropiedades.ShowEditingIcon = false;
+            this.dgvPropiedades.ShowRowErrors = false;
+            this.dgvPropiedades.Size = new System.Drawing.Size(573, 396);
+            this.dgvPropiedades.TabIndex = 19;
+            // 
+            // referencia
+            // 
+            this.referencia.HeaderText = "Referencia";
+            this.referencia.Name = "referencia";
+            this.referencia.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // localidad
+            // 
+            this.localidad.HeaderText = "Localidad";
+            this.localidad.Name = "localidad";
+            this.localidad.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // cuota
+            // 
+            this.cuota.HeaderText = "Cuota";
+            this.cuota.Name = "cuota";
+            this.cuota.ReadOnly = true;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,13 +511,13 @@
             this.Controls.Add(this.pnlPropietario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Inicio";
-            this.Text = "Form1";
+            this.Text = "Recorrer JSON";
             this.pnlPropietario.ResumeLayout(false);
             this.pnlPropietario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).EndInit();
             this.pnlPropiedad.ResumeLayout(false);
             this.pnlPropiedad.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPropiedades)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -427,7 +525,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlPropietario;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPropietarios;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblNombre;
@@ -438,7 +536,6 @@
         private System.Windows.Forms.MaskedTextBox txtDNI;
         private System.Windows.Forms.Label lblTituloPropietario;
         private System.Windows.Forms.Panel pnlPropiedad;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblLocalidad;
         private System.Windows.Forms.Label lblDireccion;
@@ -460,6 +557,16 @@
         private System.Windows.Forms.Button btnEliminarPropiedad;
         private System.Windows.Forms.Button btnGuardarPropiedad;
         private System.Windows.Forms.Button btnModificarPropiedad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridView dgvPropiedades;
+        private System.Windows.Forms.DataGridViewTextBoxColumn referencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn localidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuota;
     }
 }
 
