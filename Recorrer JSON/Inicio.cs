@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace Recorrer_JSON {
     public partial class Inicio : Form {
+        //EL SEGUIMIENTO DE ESTE EJERCICIO SE HA REALIZADO EN GITHUB: https://github.com/josemiidev/Recorrer-JSON-C-Sharp.git
         //INSTANCIAMOS EL DOCUMENTO JSON
         JSON<Propietario> bd = new JSON<Propietario>("bd.json");
 
